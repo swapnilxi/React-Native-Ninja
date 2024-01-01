@@ -30,7 +30,7 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
   );
 };
 
-export const EthPrice = ({ price }) => {
+export const ETHPrice = ({ price }) => {
   return (
     <View style={{ flexDirection: "row", alignItems: "center" }}>
       <Image

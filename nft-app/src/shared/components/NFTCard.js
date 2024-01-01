@@ -24,6 +24,22 @@ const navigation= useNavigation();
         titleSize={SIZES.large}
         subTitleSize={SIZES.small}
          />
+
+        <View
+          style={{
+            marginTop: SIZES.font,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <ETHPrice price={props.data.price} />
+          <RectButton
+            minWidth={120}
+            fontSize={SIZES.font}
+            handlePress={() => navigation.navigate("Details", { data })}
+          />
+        </View>
     </View>
   )
 }
@@ -32,6 +48,7 @@ const styles= StyleSheet.create({
         backgroundColor: COLORS.white,
         borderRadius: SIZES.font,
         marginBottom: SIZES.extraLarge,
+        padding: SIZES.font,
         margin: SIZES.base,
         ...SHADOWS.dark,
     },
